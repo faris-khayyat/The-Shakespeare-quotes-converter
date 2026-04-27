@@ -1,16 +1,25 @@
-Def shakespeare_translator(text): 
+def Shakespeare_translator(text):
     #dictionary mapping Elizabeth terms to modern slang 
-    slang_map = { 
-        "thou" : "You"
-        "art" : "are"
-        "wherefore" : "why"
-        "hark": "listen"
-        "fair" : "aesthetic"
-        "plague" : "sickness"
+    modern_map = {
+        "thou": "you",
+        "thee": "you",
+        "thy": "your",
+        "art": "are",
+        "wherefore": "why",
+        "hark": "listen",
+        "fair": "beautiful",
+        "plague": "disease",
+        "doth": "does",
+        "shalt": "will",
+        "morrow": "morning",
+        "hie": "hurry",
+        "ay": "yes",
+        "nay": "no"
     }
 
-    Words = text.lower().spilt()
-    translated  = [slang_map.get(Word, Word)for word in Words]
+
+    words = text.lower().split()
+    translated  = [modern_map.get(word, word)for word in words]
 
     return " ".join(translated).capitalize()
 
