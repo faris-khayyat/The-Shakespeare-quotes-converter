@@ -20,8 +20,11 @@ def Shakespeare_translator(text):
 
     words = text.lower().split()
     translated  = [modern_map.get(word, word)for word in words]
-
     return " ".join(translated).capitalize()
 
-user_input = input("Enter a Shakespearean Line: ")
-print(f"modern remix : {Shakespeare_translator(user_input)}")
+while True:
+    user_input = input("Enter a Shakespearean Line (or 'Q' for quit): ")
+    if user_input == 'Q' or user_input == 'q':
+        break
+    print(f"modern remix : {Shakespeare_translator(user_input)}")
+print('Thank you for using the Shakespeare Quote Converter!')
