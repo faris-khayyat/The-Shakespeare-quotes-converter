@@ -1,0 +1,16 @@
+ modern_map = {
+        "thou": "you",
+        "thee": "you",
+        "thy": "your",
+        "art": "are",
+        "wherefore": "why",
+        "hark": "listen",
+        "fair": "beautiful",
+        "plague": "disease",
+        "doth": "does",
+        "shalt": "will",
+        "morrow": "morning",
+        "hie": "hurry",
+        "ay": "yes",
+        "nay": "no"
+    }

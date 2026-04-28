@@ -1,21 +1,12 @@
+import csv 
 def Shakespeare_translator(text):
-    #dictionary mapping Elizabeth terms to modern slang 
-    modern_map = {
-        "thou": "you",
-        "thee": "you",
-        "thy": "your",
-        "art": "are",
-        "wherefore": "why",
-        "hark": "listen",
-        "fair": "beautiful",
-        "plague": "disease",
-        "doth": "does",
-        "shalt": "will",
-        "morrow": "morning",
-        "hie": "hurry",
-        "ay": "yes",
-        "nay": "no"
-    }
+ modern_map = {}
+ with open('words.csv', mode='r') as file:
+    reader = csv.reader(file)
+    next(reader)  # Skips the header row (e.g., "old, modern")
+    for row in reader:
+        # row[0] is the old word, row[1] is the modern word
+         modern_map[row[0].strip().lower()] = row[1].strip()
 
 
     words = text.lower().split()
